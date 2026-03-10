@@ -8,20 +8,22 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
 
-export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
+export const metadata = {
+  metadataBase: new URL("https://hernan-huwyler-portfolio.vercel.app"),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: "Prof. Hernan Huwyler, MBA, CPA, CAIO — AI Governance & Risk Management",
+    template: "%s | Prof. Hernan Huwyler",
   },
-  description: 'This is my portfolio.',
+  description:
+    "AI Risk Manager, GRC Director, and Quantitative Risk Lead. Expert in AI Governance, Responsible AI, EU AI Act, ISO 42001, and Digital Compliance. Executive Speaker, Corporate Trainer, Freelance Consultant. Copenhagen, Denmark.",
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
-    url: baseUrl,
-    siteName: 'My Portfolio',
-    locale: 'en_US',
-    type: 'website',
+    title: "Prof. Hernan Huwyler — AI Governance & Quantitative Risk Expert",
+    description:
+      "AI Risk Manager and GRC Executive. Freelance consulting, corporate training, and executive speaking on AI Governance, Responsible AI, and Quantitative Risk for Fortune 500 organizations.",
+    url: "https://hernan-huwyler-portfolio.vercel.app",
+    siteName: "Prof. Hernan Huwyler",
+    locale: "en_US",
+    type: "website",
   },
   robots: {
     index: true,
@@ -29,12 +31,11 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-snippet": -1,
+      "max-image-preview": "large",
     },
   },
-}
+};
 
 const cx = (...classes) => classes.filter(Boolean).join(' ')
 

@@ -3,7 +3,7 @@
 This is a porfolio site template complete with a blog. Includes:
 
 - MDX and Markdown support
-- Optimized for SEO (sitemap, rob ots, JSON-LD schema)
+- Optimized for SEO (sitemap, rob ots, JSON-LD schema) 
 - RSS Feed
 - Dynamic OG images
 - Syntax highlighting

@@ -9,7 +9,7 @@ import Footer from './components/footer'
 import { baseUrl } from './sitemap'
 
 export const metadata = {
-  metadataBase: new URL("https://hernan-huwyler-portfolio.vercel.app"),
+  metadataBase: new URL("https://hernan-huwyler-bio.vercel.app"),
   title: {
     default: "Prof. Hernan Huwyler, MBA, CPA, CAIO — AI Governance & Risk Management",
     template: "%s | Prof. Hernan Huwyler",

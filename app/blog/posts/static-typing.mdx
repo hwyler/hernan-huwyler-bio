@@ -1,52 +1,37 @@
 ---
-title: 'The Power of Static Typing in Programming'
-publishedAt: '2024-04-07'
-summary: 'In the ever-evolving landscape of software development, the debate between dynamic and static typing continues to be a hot topic.'
+title: "Core Competencies in AI Governance and Quantitative Risk"
+date: 2026-03-10
+author: "Hernan Huwyler"
+tags: ["AI-governance", "risk-management", "compliance", "ERM", "auditing"]
+published: true
 ---
 
-In the ever-evolving landscape of software development, the debate between dynamic and static typing continues to be a hot topic. While dynamic typing offers flexibility and rapid development, static typing brings its own set of powerful advantages that can significantly improve the quality and maintainability of code. In this post, we'll explore why static typing is crucial for developers, accompanied by practical examples through markdown code snippets.
+A structured approach to AI governance and risk management makes complex regulatory requirements more comprehensible and actionable. By explicitly defining frameworks and methodologies, organizations establish clear contracts for how AI systems should be developed, validated, and monitored. This clarity enables teams across legal, compliance, and technology functions to collaborate effectively and maintain alignment with evolving regulatory expectations.
 
-## Improved Code Quality and Safety
+## Facilitates Strategic Decision-Making and Control Implementation
 
-One of the most compelling reasons to use static typing is the improvement it brings to code quality and safety. By enforcing type checks at compile time, static typing catches errors early in the development process, reducing the chances of runtime errors.
+Modern governance frameworks leverage quantitative risk models to offer advanced capabilities like stress testing, scenario analysis, and impact assessments. These tools can automatically detect control gaps, suggest remediation strategies, and validate model performance, enhancing organizational resilience and reducing the likelihood of compliance failures during regulatory audits.
 
-```ts
-function greet(name: string): string {
-  return `Hello, ${name}!`
-}
+```python
+# Refactoring example: Enhancing an AI risk assessment model in Python
+import numpy as np
+from scipy import stats
 
-// This will throw an error at compile time, preventing potential runtime issues.
-let message: string = greet(123)
-```
+def calculate_risk_exposure(expected_losses, volatility, confidence_level=0.95):
+    """
+    Calculate Value at Risk (VaR) for an AI system's potential losses.
+    """
+    z_score = stats.norm.ppf(confidence_level)
+    var = expected_losses + (z_score * volatility)
+    return var
 
-## Enhanced Readability and Maintainability
-
-Static typing makes code more readable and maintainable. By explicitly declaring types, developers provide a clear contract of what the code does, making it easier for others (or themselves in the future) to understand and modify the codebase.
-
-## Facilitates Tooling and Refactoring
-
-Modern IDEs leverage static typing to offer advanced features like code completion, refactoring, and static analysis. These tools can automatically detect issues, suggest fixes, and safely refactor code, enhancing developer productivity and reducing the likelihood of introducing bugs during refactoring.
-
-```csharp
-// Refactoring example: Renaming a method in C#
-public class Calculator {
-    public int Add(int a, int b) {
-        return a + b;
-    }
-}
-
-// After refactoring `Add` to `Sum`, all references are automatically updated.
-public class Calculator {
-    public int Sum(int a, int b) {
-        return a + b;
-    }
-}
-```
-
-## Performance Optimizations
-
-Static typing can lead to better performance. Since types are known at compile time, compilers can optimize the generated code more effectively. This can result in faster execution times and lower resource consumption.
-
-## Conclusion
-
-Static typing offers numerous benefits that contribute to the development of robust, efficient, and maintainable software. By catching errors early, enhancing readability, facilitating tooling, and enabling optimizations, static typing is an invaluable asset for developers. As the software industry continues to mature, the importance of static typing in ensuring code quality and performance cannot be overstated. Whether you're working on a large-scale enterprise application or a small project, embracing static typing can lead to better software development outcomes.
+# After refactoring to include tail risk measurement
+def calculate_conditional_var(expected_losses, volatility, confidence_level=0.95):
+    """
+    Calculate Conditional Value at Risk (CVaR) for extreme loss scenarios.
+    This provides a more comprehensive view of tail risks in AI deployments.
+    """
+    z_score = stats.norm.ppf(confidence_level)
+    var = expected_losses + (z_score * volatility)
+    cvar = expected_losses + (volatility * stats.norm.pdf(z_score) / (1 - confidence_level))
+    return {"VaR": var, "CVaR": cvar}
